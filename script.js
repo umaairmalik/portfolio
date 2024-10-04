@@ -35,14 +35,14 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Freelancer", "Developer", "Designer"],
+        strings: ["UI/UX Designer", "Graphic Designer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Freelancer", "Developer", "Designer"],
+        strings: ["UI/UX Designer",  "Graphic Designer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -68,6 +68,21 @@ $(document).ready(function(){
                 items: 3,
                 nav: false
             }
+        }
+    });
+});
+
+const projectUrls = {
+    foodoclock: 'https://www.behance.net/gallery/209445023/AI-web-app-healthcare',
+    salesautomation: 'https://www.behance.net/gallery/209444935/Finance-Now-website'
+};
+
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', function() {
+        const project = this.getAttribute('data-project');
+        const url = projectUrls[project];
+        if (url) {
+            window.open(url, '_blank');
         }
     });
 });
