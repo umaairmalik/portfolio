@@ -411,12 +411,22 @@
                         document.getElementById('contactForm').addEventListener('submit', async function (event) {
                             event.preventDefault();
 
+                            // const formData = {
+                            //     name: event.target.name.value,
+                            //     email: event.target.email.value,
+                            //     phone: event.target.phone.value.toString(),
+                            //     subject: event.target.subject.value,
+                            //     message: event.target.message.value
+                            // };
+
+                            const form = event.target;  // Get the form element
+
                             const formData = {
-                                name: event.target.name.value,
-                                email: event.target.email.value,
-                                phone: event.target.phone.value.toString(),
-                                subject: event.target.subject.value,
-                                message: event.target.message.value
+                                name: form.name.value,
+                                email: form.email.value,
+                                phone: form.phone.value.toString(),  // Send phone as string
+                                subject: form.subject.value,
+                                message: form.message.value
                             };
 
                             try {
