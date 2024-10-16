@@ -408,47 +408,13 @@
                     </form>
 
                     <script>
-                        // document.getElementById('contactForm').addEventListener('submit', async function (event) {
-                        //     event.preventDefault(); // Prevent the default form submission
-
-                        //     // Get form data
-                        //     const formData = {
-                        //         name: event.target.name.value,
-                        //         email: event.target.email.value,
-                        //         phone: event.target.phone.value,
-                        //         subject: event.target.subject.value,
-                        //         message: event.target.message.value
-                        //     };
-
-                        //     try {
-                        //         // Send POST request to the API
-                        //         const response = await fetch('https://contact-us-api-portfolio.vercel.app/api/v1/contact-us/', {
-                        //         // const response = await fetch('https://contact-us-api-portfolio.vercel.app/api/v1/contact-us/', {
-                        //             method: 'POST',
-                        //             headers: {
-                        //                 'Content-Type': 'application/json'
-                        //             },
-                        //             body: JSON.stringify(formData)
-                        //         });
-
-                        //         const result = await response.json();
-
-                        //         if (response.ok) {
-                        //             alert('Message sent successfully!');
-                        //         } else {
-                        //             alert('Error: ' + result.message);
-                        //         }
-                        //     } catch (error) {
-                        //         alert('An error occurred: ' + error.message);
-                        //     }
-                        // });
                         document.getElementById('contactForm').addEventListener('submit', async function (event) {
                             event.preventDefault();
 
                             const formData = {
                                 name: event.target.name.value,
                                 email: event.target.email.value,
-                                phone: event.target.phone.value.toString(),  // Send phone as string
+                                phone: event.target.phone.value.toString(),
                                 subject: event.target.subject.value,
                                 message: event.target.message.value
                             };
@@ -465,16 +431,15 @@
                                 const result = await response.json();
 
                                 if (response.ok) {
-                                    // alert('Message sent successfully!');
                                     Swal.fire({
                                         title: 'Success!',
                                         text: 'Message sent successfully!',
                                         icon: 'success',
                                         confirmButtonText: 'OK'
                                     });
+                                    form.reset();
                                 } else {
-                                    console.error('Error:', result); // Log error for debugging
-                                    // alert('Error: ' + result.message);
+                                    console.error('Error:', result);
                                     Swal.fire({
                                         title: 'Error!',
                                         text: result.message,
@@ -483,8 +448,13 @@
                                     });
                                 }
                             } catch (error) {
-                                console.error('Request failed:', error); // Detailed error logging
-                                alert('An error occurred: ' + error.message);
+                                console.error('Request failed:', error);
+                                Swal.fire({
+                                    title: 'Error!',
+                                    text: 'An error occurred: ' + error.message,
+                                    icon: 'error',
+                                    confirmButtonText: 'OK'
+                                });
                             }
                         });
 
