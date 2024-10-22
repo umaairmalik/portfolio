@@ -73,8 +73,9 @@ $(document).ready(function(){
 });
 
 const projectUrls = {
-    foodoclock: 'https://www.behance.net/gallery/209445023/AI-web-app-healthcare',
-    salesautomation: 'https://www.behance.net/gallery/209444935/Finance-Now-website'
+    foodoclock: 'https://www.behance.net/gallery/210108657/Food-O-Clock-Android-app',
+    salesautomation: 'https://www.behance.net/muhammadumair373',
+    obliqware: 'https://www.behance.net/gallery/210343417/Obliqware'
 };
 
 document.querySelectorAll('.card').forEach(card => {
