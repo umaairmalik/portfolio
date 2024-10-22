@@ -15,6 +15,42 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
+    <style>
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 5rem;
+            right: 2rem;
+            cursor: pointer;
+        }
+
+        .whatsapp-btn img {
+            width: 40px;
+        }
+
+        /* For smaller screens like tablets */
+        @media (max-width: 768px) {
+            .whatsapp-btn {
+                /* bottom: 3rem; */
+                right: 1.5rem;
+            }
+
+            .whatsapp-btn img {
+                width: 35px;
+            }
+        }
+
+        /* For mobile screens */
+        @media (max-width: 480px) {
+            .whatsapp-btn {
+                /* bottom: 2rem; */
+                right: 1rem;
+            }
+
+            .whatsapp-btn img {
+                width: 30px;
+            }
+        }
+    </style>
 
 </head>
 
@@ -22,7 +58,8 @@
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
-    <div style="position: fixed; bottom: 5rem; right: 2rem;cursor: pointer;">
+    <!-- <div style="position: fixed; bottom: 5rem; right: 2rem;cursor: pointer;"> -->
+    <div class="whatsapp-btn">
         <a href="https://wa.me/qr/GUE5IEJLBSDIB1" target="_blank">
             <img src="./images/whatsapp.png" style="width: 40px;" alt="">
         </a>
@@ -291,14 +328,20 @@
                     <div class="box">
                         <img src="./images/obliqware.png" style="padding: 0.7rem;">
                         <div class="text">Obliqware Digital Services</div>
-                        <p>A service-based startup offering expert solutions in graphic design, web and mobile development, AI, data science, and UI/UX design. I designed the website's clean and user-friendly interface, ensuring that Obliqware's services are presented clearly and effectively to engage clients and meet their specific needs.</p>
+                        <p>A service-based startup offering expert solutions in graphic design, web and mobile
+                            development, AI, data science, and UI/UX design. I designed the website's clean and
+                            user-friendly interface, ensuring that Obliqware's services are presented clearly and
+                            effectively to engage clients and meet their specific needs.</p>
                     </div>
-                </div>                
+                </div>
                 <div class="card" data-project="foodoclock">
                     <div class="box">
                         <img src="./images/foodoclock.PNG" alt="">
                         <div class="text">Food O Clock Android App</div>
-                        <p>His Android delivery tracking app allows users to track their food delivery in real-time, receive instant push notifications, give feedback on their experience, view estimated delivery times, and contact drivers directly. The design prioritizes user convenience, satisfaction, and seamless interaction throughout the entire process.</p>
+                        <p>His Android delivery tracking app allows users to track their food delivery in real-time,
+                            receive instant push notifications, give feedback on their experience, view estimated
+                            delivery times, and contact drivers directly. The design prioritizes user convenience,
+                            satisfaction, and seamless interaction throughout the entire process.</p>
                         <!-- <p>This Android delivery tracking app allows users to track their food delivery in real-time,
                             receive instant push notifications, and give feedback on their experience. The design
                             prioritizes user convenience and satisfaction throughout the entire process.</p> -->
